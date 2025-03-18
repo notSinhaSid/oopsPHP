@@ -4,11 +4,11 @@ spl_autoload_register('classLoader');
 
 function classLoader($className)
 {
-    $url = $_SERVER['HTTPS_HOST'].$_SERVER['REQUEST_URI'];
+    $url = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];  // the line is not clear
     
     if(strpos($url, 'includes')!==FALSE)
     {
-        $path ='../classes/';
+        $path = '../classes/';
     }
     else{
         $path ='classes/';
