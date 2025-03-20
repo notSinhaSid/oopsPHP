@@ -11,3 +11,5 @@ if ($conn->connect_error)
     die("connection is dead");
     exit();
 }
+
+?>
