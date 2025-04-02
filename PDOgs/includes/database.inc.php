@@ -1,0 +1,20 @@
+<?php
+
+$dsn ="mysql:hos=localhost; dbname=ppo_db2";
+$user="root";
+$password="";
+
+// basic method not good
+
+try
+{
+    $conn = new PDO($dsn, $user, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch (PDOEception $e)
+{
+    // echo $e->getMessage();
+}
+
+
+?>
