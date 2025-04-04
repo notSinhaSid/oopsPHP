@@ -28,12 +28,12 @@ if($result->rowCount()>0)
         echo '<td>'.$row['sCity'].'</td>';
 
         echo '<td><form action="" method="POST">
-                <input type="hidden" name="sId" value="'.$row['Id'].'">
+                <input type="hidden" name="Id" value="'.$row['Id'].'">
                 <button class="btn btn-sm btn-danger" name="delete" type="submit"><i class="fa-sharp fa-solid fa-trash"></i></button>
                 </form></td>';
 
         echo '<td><form action="" method="POST">
-                <input type="hidden" name="sId" value="'.$row['Id'].'">
+                <input type="hidden" name="Id" value="'.$row['Id'].'">
                 <button class="btn btn-sm btn-warning" name="edit" type="submit"><i class="fa-solid fa-pen"></i></button>
                 </form></td>';
         echo '</tr>';
