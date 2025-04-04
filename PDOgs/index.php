@@ -3,21 +3,37 @@ include('includes/database.inc.php');
 
 // include('includes/retrive.inc.php');
 
-include('includes/retrivetable.inc.php');
+// include('includes/insertData.inc.php');
+
+include('includes/insertDataForm.inc.php');
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
-<body>
+<?php include('includes/header.inc.php');?>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-4">
+            <!-- <h3>This is the form section </h3> -->
+             <form action="" method="POST" class="form-group">
+                <label for="Name" class="form-label">Name</label>
+                <input type="text" name="sName" placeholder="Your Name" class="form-control">
 
+                <label for="Roll">Roll Number</label>
+                <input type="number" name="sRoll" class="form-control">
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+                <label for="City">City</label>
+                <input type="text" name="sCity" placeholder="Your city" class="form-control">
 
-</body>
-</html>
+                <button type="submit" class="btn btn-sm btn-success mt-2" name="sRegister" value="">Register</button>
+                <button type="submit" class="btn btn-sm btn-light mt-2 ml-2" name="sUpdate" value="">Update</button>
+             </form>
+             <?php if(isset($msg)){echo $msg;}?>
+        </div>
+        <div class="col-lg-4 offset-lg-2">
+            <!-- <h3>This is for the response display</h3> -->
+             <?php include('includes/retrivetable.inc.php');?>
+    </div>
+</div>
+
+<?php
+include('includes/footer.inc.php');
+?>
