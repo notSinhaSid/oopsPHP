@@ -53,6 +53,6 @@ echo "<br>The number of rows affected are : ". $affected_rows;
 
 mysqli_stmt_close($result);
 
-mysqli_close($conn);
+// mysqli_close($conn);
 
 ?>
