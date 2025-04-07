@@ -1,6 +1,6 @@
 <?php
 
-$dsn ="mysql:hos=localhost; dbname=ppo_db2";
+$dsn ="mysql:host=localhost; dbname=ppo_db2";
 $user="root";
 $password="";
 
