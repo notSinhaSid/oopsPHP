@@ -1,14 +1,19 @@
 <?php
 include('dbconnection.inc.php');
 
-if(isset($_COOKIE[$cookieName]))
+session_start();
+
+if(isset($_SESSION['isLogin']))
 {
-    $msg = "Welcome : ".$_COOKIE[$cookieName];
+    $regEmail = $_SESSION['user'];
+
+    // header('location:dashboard.php');
+    
+
+    echo $regEmail;
+    // $_COOKIE
 }
-else
-{
-    $msg= "<span>Hello, new user</span>";
-}
+
 ?>
 
 <!DOCTYPE html>
@@ -20,12 +25,5 @@ else
 </head>
 <body>
     <h3>This is dashboard</h3>
-
-    <?php
-        if(isset($msg))
-        {
-            echo $msg;
-        }
-    ?>
 </body>
 </html>
