@@ -47,11 +47,13 @@ if(!isset($_SESSION['isLogin']))
 
                         $result->execute();
 
-                        echo '<script>location.href="dashboard.inc.php"</script>';
+                        // echo '<script>location.href="dashboard.inc.php"</script>';
+                        header('Location: dashboard.inc.php');
                     }
                     else{
                         $result->execute();
-                        echo '<script>location.href="dashboard.inc.php"</script>';
+                        // echo '<script>location.href="dashboard.inc.php"</script>';
+                        header('Location: dashboard.inc.php');
                     }
                 }
                 else{
